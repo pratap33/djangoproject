@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ERROR-PAGE</title>
+</head>
+<body>
+<h1>invalid amount</h1><br>
+<table border="1">
+    <tr>
+        <th>Your username</th>
+        <th>your current balance</th>
+        <th>your splited balance</th>
+        <th>your balance send to</th>
+    </tr>
+     {% for rec in records %}
+    <tr>
+        <td>{{ rec.uname }}</td>
+        <td>{{ rec.actbal }}</td>
+        <td>{{ rec.splitbal }}</td>
+        <td>{{ rec.paidto }}</td>
+    </tr>
+    {%  endfor %}
+</table>
+<a href="/userapp/loginpage1">Go back to login page and enter details again</a><br>
+</body>
+</html>
